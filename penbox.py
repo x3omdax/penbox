@@ -133,10 +133,12 @@ def ncrack():
         os.system("clear"); passwd()
 #reaver
 def reaver():
-    print("Reaver has been designed to be a robust and practical attack against Wi-Fi Protected Setup")
-    print(" WPS registrar PINs in order to recover WPA/WPA2 passphrases. It has been tested against a")
-    print(") wide variety of access points and WPS implementations")
-    print("1 to accept / 0 to decline")
+	print """
+		Reaver has been designed to be a robust and practical attack against Wi-Fi Protected Setup
+		WPS registrar PINs in order to recover WPA/WPA2 passphrases. It has been tested against a
+		wide variety of access points and WPS implementations
+		1 to accept / 0 to decline
+"""
     creaver = input("y / n :")
     if creaver in yes:
         os.system("apt-get -y install build-essential libpcap-dev sqlite3 libsqlite3-dev aircrack-ng pixiewps");os.system("git clone https://github.com/t6x/reaver-wps-fork-t6x.git");os.system("cd reaver-wps-fork-t6x");os.system("cd src/");os.system("./configure");os.system("make")
