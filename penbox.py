@@ -180,6 +180,16 @@ def sqlmap():
     else: 
         menu()
 ####################################
+#commix
+def commix():
+    print ("Automated All-in-One OS Command Injection and Exploitation Tool.")
+    print ("usage : python commix.py --help")
+    choicecmx = raw_input("Continue: y/n :")
+    if choicecmx in yes:
+        os.system("git clone https://github.com/stasinopoulos/commix.git commix")
+    elif choicecmx in no:
+        os.system('clear'); info()        
+####################################
 #setoolkit 
 def setoolkit():
     print ("The Social-Engineer Toolkit is an open-source penetration testing framework")
@@ -346,6 +356,7 @@ def exp():
     print("2 : sqlmap")
     print("3 : Shellnoob")
     print("4 : Inurlbr")
+    print("5 : commix")
     print("99 : Go Back To Main Menu")
     choice5 = raw_input("Select from the menu:")
     if choice5 =="2":
@@ -356,6 +367,8 @@ def exp():
         os.system("clear"); shellnoob()
     if choice5 == "4":
         os.system("clear"); ifinurl()
+    if choice5 == "5":
+        os.system("clear"); commix()
     elif choice5 =="99":
         menu()
     elif choice5 == "":
